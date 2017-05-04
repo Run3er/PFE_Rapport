@@ -161,29 +161,6 @@
 \fancyhead[R]{Table des Matières}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\fancyhead[R]{Résumés}
-
-%\include{Resumes/resumeF}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-\mainmatter %numéros arabes
-\pagestyle{fancy}
-\fancyhead[R]{Introduction Générale}
-\include{Introduction/introduction}
-\fancyhf{}
-%\fancyhead[R]{Introduction Générale}
-\fancyfoot[R]{\thepage}
-\renewcommand{\headrulewidth}{0.5pt}
-\renewcommand{\footrulewidth}{0pt}
-
-
-\include{Chapitre1/chapitre1}
-%\include{Chapitre2/chapitre2}
-
-
 %%%%%%%% Figures
 
 \makeatletter
@@ -212,8 +189,31 @@
 
 \fancyhead[R]{Liste des Tableaux}
 
-%%%%%%%%%%%
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\fancyhead[R]{Résumés}
+
+%\include{Resumes/resumeF}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\mainmatter %numéros arabes
+\pagestyle{fancy}
+\fancyhead[R]{Introduction Générale}
+%\include{Introduction/introduction}
+\fancyhf{}
+\fancyhead[R]{Introduction Générale}
+\fancyfoot[R]{\thepage}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0pt}
+
+
+\include{Chapitre1/chapitre1}
+%\include{Chapitre2/chapitre2}
+
+
+%%%%%%%%%%%
 
 \backmatter
 \pagestyle{fancy}
