@@ -1,7 +1,7 @@
 \documentclass[oneside,12pt]{Classes/aesm_edspia}
 
 \usepackage{minitoc}
-\usepackage[latin1]{inputenc}
+\usepackage[utf8]{inputenc}
 \usepackage[english,french]{babel}
 \usepackage[T1]{fontenc}
 \usepackage{amsmath}
@@ -12,11 +12,11 @@
 \usepackage{tabularx}
 \usepackage{epsfig, floatflt, amssymb}
 \usepackage{moreverb} %% pour le verbatim en boite
-\usepackage{cases}%equations en systemes numérotés - soluce possible package : CASES
+\usepackage{cases}%equations en systemes numÃ©rotÃ©s - soluce possible package : CASES
 \usepackage{multirow} %% pour regrouper un texte sur plusieurs lignes dans une table
 \usepackage{url} %% pour citer les url par \url
 \usepackage[all]{xy} %% pour la barre au dessus des symboles
-\usepackage{textcomp} %% pour le symbol pour mille par \textperthousand et degrés par \degres
+\usepackage{textcomp} %% pour le symbol pour mille par \textperthousand et degrÃ©s par \degres
 \usepackage[right]{eurosym}
 \usepackage{setspace} %interligne simple, double etc...
 \usepackage{Classes/eurosans} %%pour le symbole \euro
@@ -29,10 +29,10 @@
 \usepackage[labelsep=endash, textfont={footnotesize, singlespacing}, margin=10pt, format=plain, labelfont=bf]{caption}
 \usepackage[Conny]{Classes/fncychap} %en tete chapitrage
 \newcommand{\ie}{c.-\`a-d.~}
-\hbadness=10000% pb d'overfull box réglé
+\hbadness=10000% pb d'overfull box rÃ©glÃ©
 \hfuzz=50pt
 \pdfcompresslevel9 % pour compresser le pdf final au maximum
-\pdfoptionpdfminorversion=5 % pour accepté les images PDF version 1.5 (ex: celles produites par Office 2007)
+\pdfoptionpdfminorversion=5 % pour acceptÃ© les images PDF version 1.5 (ex: celles produites par Office 2007)
 \def\underscore{\char`\_}
 \makeatletter
 \renewcommand{\thesection}{\arabic {section}}
@@ -90,7 +90,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \renewcommand\figurename{\small\textbf{Figure}}
 
-\addtocounter{page}{-1}%pour revenir à 0
+\addtocounter{page}{-1}%pour revenir Ã  0
 
 % Pour remplir la page de garde
 \AuteurA{Flen} {FOULENI}
@@ -106,7 +106,7 @@
 
 
 
-\President{M. President} {FLEN}     %% Président du Jury
+\President{M. President} {FLEN}     %% PrÃ©sident du Jury
 \RapporteurA{Mme. Rapporteur} {FLENA} %%Rapporteur
 
 
@@ -114,19 +114,19 @@
 \AnneeUniv{2016/2017}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\makethese %% crée la couverture.
+\makethese %% crÃ©e la couverture.
 
 \onehalfspacing
 
-% une page blanche (deuxième de couverture)
+% une page blanche (deuxiÃ¨me de couverture)
 \newpage\thispagestyle{empty}\addtocounter{page}{-3}
 \null\newpage\thispagestyle{empty}
 
-\dominitoc % génère la minitoc
+\dominitoc % gÃ©nÃ¨re la minitoc
 \nomtcrule % supprime les lignes horizontales de la minitoc
 \renewcommand{\mtctitle}{Plan} % Modifie le titre de la minitoc
 
-\frontmatter %numérotation en iii
+\frontmatter %numÃ©rotation en iii
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[R]{Remerciements}
@@ -139,17 +139,17 @@
 
 %%%%%%%% TOC
 
-%profondeur dans la table des matières et de la numérotation des sections
+%profondeur dans la table des matiÃ¨res et de la numÃ©rotation des sections
 
 \setcounter{secnumdepth}{3}
 \setcounter{tocdepth}{3}
 
 
 \renewcommand{\contentsname}%
-    {Table des Matières}%
+    {Table des MatiÃ¨res}%
 
 %%%%minitoc
-%\dominitoc % génère la minitoc
+%\dominitoc % gÃ©nÃ¨re la minitoc
 %\nomtcrule % supprime les lignes horizontales de la minitoc
 %\renewcommand{\mtctitle}{Plan} % Modifie le titre de la minitoc
 
@@ -158,7 +158,30 @@
 
 \renewcommand{\headrulewidth}{0.5pt}
 \renewcommand{\footrulewidth}{0pt}
-\fancyhead[R]{Table des Matières}
+\fancyhead[R]{Table des MatiÃ¨res}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\fancyhead[R]{RÃ©sumÃ©s}
+
+%\include{Resumes/resumeF}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\mainmatter %numÃ©ros arabes
+\pagestyle{fancy}
+\fancyhead[R]{Introduction GÃ©nÃ©rale}
+\include{Introduction/introduction}
+\fancyhf{}
+%\fancyhead[R]{Introduction GÃ©nÃ©rale}
+\fancyfoot[R]{\thepage}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0pt}
+
+
+\include{Chapitre1/chapitre1}
+%\include{Chapitre2/chapitre2}
 
 
 %%%%%%%% Figures
@@ -189,34 +212,14 @@
 
 \fancyhead[R]{Liste des Tableaux}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\fancyhead[R]{Résumés}
-
-%\include{Resumes/resumeF}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-\mainmatter %numéros arabes
-\pagestyle{fancy}
-\fancyhead[R]{Introduction Générale}
-\include{Introduction/introduction}
-\fancyhf{}
-%\fancyhead[R]{Introduction Générale}
-\fancyfoot[R]{\thepage}
-\renewcommand{\headrulewidth}{0.5pt}
-\renewcommand{\footrulewidth}{0pt}
-
-
-\include{Chapitre1/chapitre1}
-%\include{Chapitre2/chapitre2}
+%%%%%%%%%%%
 
 
 \backmatter
 \pagestyle{fancy}
 \fancyhf{}
-\renewcommand{\chaptermark}[1]{\markboth{Conclusion Générale et Perspectives}{}}
-\fancyhead[R]{Conclusion Générale et Perspectives}
+\renewcommand{\chaptermark}[1]{\markboth{Conclusion GÃ©nÃ©rale et Perspectives}{}}
+\fancyhead[R]{Conclusion GÃ©nÃ©rale et Perspectives}
 \fancyfoot[R]{\thepage}
 \renewcommand{\headrulewidth}{0.5pt}
 \renewcommand{\footrulewidth}{0pt}
