@@ -25,6 +25,7 @@ La méthodologie employée tout au long de sa mise en œuvre sera traitée vers 
 
 %==============================================================================
 \section{Présentation de l'organisme d'accueil}
+
 %-----------------------------------------------------------------------------------
 \subsection{L'entreprise "IT SERV"}
 IT SERV est une société de services et de conseil exerçant dans le domaine des Technologies de l'Information et de la Communication.
@@ -86,57 +87,119 @@ Celle-ci revient généralement à la gestion de multiples facettes, notamment :
 \end{itemize}
 \
 
-Avec les projets de plus en plus complexes auxquels les entreprises font face, gérer tous les flux d'information en perpétuel changement d'un projet se révèle être une tâche des plus ardues pour les chefs de projets. Sans un système efficace de traitement des données et d'achemeninement de l'information, ceux-ci finissent par être submergés par les requêtes, et se retrouvent le plus souvent dépassés par les événements. Ceci se reflète en conséquence par un manquement au niveau de la réponse aux attentes de l'une ou plusieurs des parties prenantes au projet, qui, souvent dû à des contraintes de disponibilité, restent trop longtemps en déphasage avec les dernières fluctuations et les mises à jour du projet.\\
+Avec les projets de plus en plus complexes auxquels les entreprises font face, gérer tous les flux d'information en perpétuel changement d'un projet se révèle être une tâche des plus ardues pour les chefs de projets. Sans un système efficace de traitement des données et d'achemeninement de l'information, ceux-ci finissent par être submergés par les requêtes, et se retrouvent le plus souvent dépassés par les événements. Cela se reflète en conséquence par un manquement au niveau de la réponse aux attentes de l'une ou plusieurs des parties prenantes au projet, qui, souvent dû à des contraintes de disponibilité, restent trop longtemps en déphasage avec les dernières fluctuations et les mises à jour du projet pour pouvoir prévenir les situations de crise.\\
 C'est là que réside le cœur de la problématique : réussir à synchroniser de manière efficace toutes les parties prenantes à un projet avec l'état actuel de ce dernier, en distinguant le chef de projet en tant que pièce maîtresse de sa supervision.\\
 \\
-Le projet présent a pour but de répondre à ce problème en fournissant une solution logicielle dédiée à la gestion de projets. La solution se doit de répondre adéquatement aux attentes des chefs de projets en termes de fonctionnalités, mais aussi fournir un point pivotal d'aide à la décision pour les dirigeants de l'entreprise. En effet, les données récupérées tout au long de son exercice devront être en mesure d'être synthétisées en des données actionables, capables d'orienter les dirigeants de l'entreprise dans leur prise de décisions stratégiques quant à la détermination des clients les plus profitables, les partenariats les plus importants, etc.\\
-Au sein de l'environnement extrêmement concurrentiel dans lequel exerce l'entreprise, et au vu du poids dont relève sa prestation de consulting en termes de gestion de bout en bout de projets, il est clair qu'une solution dédidée à la gestion du portefeuille de projets de l'entreprise avec ses clients constituerais un point fort face à la concurrence et impacterais positivement l'image de la société en influençant grandement le niveau de satisfaction de ses clients.\\
-\\
-Outre l'apport de l'application pour la gestion de ses propres projets en interne, dans l'optique de sa conversion en un éditeur de logiciel, IT SERV entrevoit de développer une offre autour d'une version SaaS de l'application.\\
- Dans ce cadre, le développement d'une interface de gestion et de monitoring de l'aspect SaaS de l'application s'impose en tant que partie à part entière du projet. Elle se verras traîtée plus en détail au cours du chapitre \ref{chapterX}.
+Le projet présent a pour but de répondre à ce problème en fournissant une solution logicielle dédiée à la gestion de projets. La solution se doit de répondre adéquatement aux attentes des chefs de projets de l'entreprise, en termes de fonctionnalités, mais aussi fournir un point pivotal d'aide à la décision pour ses dirigeants. Effectivement, les données récupérées tout au long de son exercice devront être en mesure d'être synthétisées en des données actionables, capables d'orienter les dirigeants de l'entreprise dans leur prise de décisions stratégiques quant à la détermination, entre autres,  des clients les plus profitables, les partenariats à privilégier, etc.\\
+Au sein de l'environnement extrêmement concurrentiel dans lequel exerce l'entreprise, et au vu du poids dont relève sa prestation de consulting, en l'occurence LA gestion de bout en bout de projets informatiques, il est clair qu'une solution dédidée à la gestion du portefeuille de projets de l'entreprise et de ses clients constituerais un point décisif face à la concurrence, et impacterais positivement l'image de la société en influençant grandement le niveau de satisfaction de ses clients.\\
+
+Outre l'apport de l'application pour la gestion de ses propres projets en interne, dans l'optique de sa conversion en un éditeur de logiciel, IT SERV entrevoit de développer une offre autour d'une version SaaS de l'application, depuis son propre cloud.\\
+ Dans ce cadre, le développement d'une interface de gestion et de monitoring de cet aspect s'impose en tant que partie à part entière du projet. Elle se verras traîtée plus en détail au cours du chapitre \ref{chapterX}.
 
 
 %==============================================================================
 \section{Méthodologie de travail}
-Pour la réalisation d'un projet informatique d'envergure, il est indispensable de suivre une méthodologie de travail bien établie, prenant en compte les spécificités du projet, dans le but de garantir un niveau optimal de rendement tout au long de sa réalisation.
+Pour la réalisation d'un projet informatique d'envergure, il est indispensable de suivre une méthodologie de travail bien établie, prenant en compte les spécificités du projet, et ce dans le but de garantir un niveau optimal de rendement tout au long de sa réalisation.
 %-----------------------------------------------------------------------------------
-\subsection{Choix méthodologique}
-Les avancées majeures dans l'univers de l'informatque ont été accompagnées d'une révolution dans la manière de faire et de penser pour produire des logiciels. Celle-ci a éventuellement donnée naissance au processus unifié et au mouvement de déveoppement agile, qui se caractérisent par le développement de manière itérative et incrémentale.\\
-Les deux méthodologies initialement considérées pour la mise en œuvre du projet ont été RUP \cite{RUP} et SCRUM \cite{SCRUM}, chacune mettant en avant les principaux avantages du processus unifié et des méthodes agiles, respectivement.\\
-\\
-À première vue, le processus unifié semble assez similaire aux méthodes agiles. Néanmoins, il s'en distingue par certaines caractéristiques :
+\subsection{Choix de la méthodologie}
+Les avancées majeures dans l'univers de l'informatque ont été accompagnées d'une révolution dans la manière de faire et de penser pour produire des logiciels. Celle-ci a éventuellement donnée naissance au processus unifié et au mouvement de déveoppement agile, qui se caractérisent par le développement itératif et incrémental.\\
+Les deux méthodologies initialement considérées pour la mise en œuvre du projet sont RUP \cite{RUP} et SCRUM \cite{SCRUM}. Chacune met en avant les principaux avantages du processus unifié et des méthodes agiles, respectivement.\\
+
+À première vue, le processus unifié semble assez similaire à l'approche agile. Néanmoins, il s'en distingue par certaines caractéristiques :
 \begin{itemize}
 \item Piloté par les cas d'utilisation et les riques
     \item Centré sur l'architecture
     \item Prescrit un niveau élévé de formalisme
     \item Préconise un travail considérable sur les spécifications en amont
 \end{itemize}
-Plus particulièrement, RUP s'impose en tant qu'implémentation standard du processus unifié. Son attrait majeur réside dans sa minimisation des risques très tôt dans le développement et l'adoption d'une approche rationnelle au cycle de développement de logiciel, scindée en quatres phases (pouvant elles-même être subdivisées en sous-itérations) :
+Plus particulièrement, RUP s'impose en tant qu'implémentation standard du processus unifié. Son attrait majeur réside dans sa minimisation des risques très tôt dans le développement et l'adoption d'une approche rationnelle pour le cycle de développement de logiciel, scindée en quatres phases (pouvant elles-même être subdivisées en sous-itérations) :
 \begin{itemize}
-    \item Inception : L'objectif principal est de cerner le système de façon adéquate pour établir la vision ainsi que de détermnier les risques et des prévisions sur les coûts et les charges nécessaires. Si le projet ne passe pas ce jalon, appelé l'étape de l'objectif du cycle de vie, il peut être annulé ou répété après avoir été réajusté.
-    \item Élaboration : L'objectif principal est d'atténuer les principaux éléments de risque identifiés à la phase précedente. La phase d'élaboration est l'endroit où le projet commence à prendre forme. Dans cette phase, l'analyse du domaine du problème est faite et l'architecture du projet obtient sa forme de base.
-    \item Construction : Dans cette phase, l'accent est mis sur le développement de composants et d'autres fonctionnalités du système. C'est la phase où la majeure partie du codage a lieu.
-    \item Transition : L'objectif principal est de «transiter» le système, du développement à la production, le rendant accessible et compris par l'utilisateur final (bêta testing, contrôle qualité, ...). Si tous les objectifs sont atteints, le jalon de sortie du produit est atteint et le cycle s'achêve.
+    \item Inception : essentiellemet, cerner le système de façon adéquate pour établir la vision, détermnier les risques et établir des prévisions (coûts, charges, ...). Si le projet ne passe pas ce jalon, il peut être annulé ou répété après avoir été réajusté
+    \item Élaboration : l'objectif principal est d'atténuer les éléments de risque identifiés. C'est ici que le projet commence à prendre forme (analyse du domaine, architecture de base, ...).
+    \item Construction : l'accent est mis sur le développement de composants et d'autres fonctionnalités du système. La majeure partie du codage a lieu ici
+    \item Transition : transiter le système du développement à la production (bêta testing, contrôle qualité, etc)
 \end{itemize}
-L'approche offre une description assez élaborée du processus de développement, ce qui se révèle être surtout utile pour guider le développement d'une manière disciplinée et facilite le travail de planification du travail en aval. Cependant, cette discipline n'est pas sans prix. Le niveau de formaisme requis et la rigidité des processus prescrits pour la transition d'une phase à l'autre (planification principalement en amont, jalonnée avec des dates d'échéance) et la prise en compte du changement, nécessitant constamment la génération d'artéfacts  divers (spécifications formelles, document d'architecture, ...) la rend inadaptée à l'application au projet présent, qui nécessite de prioriser le développement rapide de fonctionnalités et du test fréquent du rendu de la solution.\\
-\\
-Les méthodes Agiles partent du principe que spécifier et planifier dans l’intégralité les détails d’un produit (approche prédictive) avant de le développer est contre-productif. Le terme "agile" définit une approche de gestion de projet qui prend le contre-pied des approches traditionnelles, prédictives et séquentielles. La notion même de "gestion de projet" est remise en question au profit de "gestion de produit". De façon à raisonner davantage "produit" que "projet". Après tout l'objectif d'un projet informatique consiste bien à donner naissance à un produit \cite{http://www.agiliste.fr/introduction-methodes-agiles/}.  L’idée de l’approche consiste à se fixer un objectif à court terme et à se mettre en route sans tarder. Une fois ce premier objectif atteint, on effectue une brève pause, et on adapte son itinéraire en fonction de la situation du moment. Ainsi de suite jusqu’à la destination finale. Cette approche peut être qualifiée d’empirique.\\
- La méthode SCRUM est la méthodologie la plus utilisée parmi les méthodes Agiles existantes. Elle est caractérisée par :
+L'approche offre une description assez élaborée du processus de développement, ce qui se révèle être très utile pour guider le développement d'une manière disciplinée et cohérente, tout en facilitant le travail de planification en aval. Cependant, cette discipline n'est pas sans prix. Le niveau de formalisme requis et la rigidité des processus prescrits pour la transition d'une phase à l'autre ainsi que pour la prise en compte du changement (planification lourde, principalement en amont, dates d'échéance, ...), nécessitant constamment la génération d'artéfacts  divers (spécifications formelles, document d'architecture, ...) la rend inadaptée à l'application au projet présent, qui nécessite de prioriser le développement rapide de fonctionnalités et la validation fréquente du rendu.\\
+
+Les méthodes Agiles quant à elles, partent du principe que spécifier et planifier dans l’intégralité les détails d’un produit (approche prédictive) avant de le développer est contre-productif. Le terme "agile" définit une approche de gestion de projet qui prend le contre-pied des approches traditionnelles. La notion même de "gestion de projet" est remise en question au profit de "gestion de produit". De façon à raisonner davantage "produit" que "projet". Après tout l'objectif d'un projet informatique consiste bien à donner naissance à un produit \cite{http://www.agiliste.fr/introduction-methodes-agiles/}.  L’idée de l’approche consiste à se fixer un objectif à court terme et à se mettre en route sans tarder. Une fois ce premier objectif atteint, on effectue une brève revue de l'état actuel, et on adapte son itinéraire en fonction de la situation du moment, ainsi de suite, jusqu’à la destination finale.\\
+ La méthode SCRUM est la méthodologie la plus utilisée parmi les méthodes agiles existantes. Elle est caractérisée par :
 \begin{itemize}
     \item L’existence d’une auto-organisation
     \item Des rôles définis : Scrum Master, Product Owner, équipe de développement
-    \item Un ensemble de cérémoniaux (daily meeting, sprint review…)
+    \item Un ensemble de cérémoniaux (réunion quotidienne, revue de sprint, …)
     \item La présence constante du client
-    \item La mise en place de mécanismes favorisant les livraisons fréquentes (sprint)
-    \item Une acceptation du changement (mais pas à n’importe quel prix)
+    \item La mise en place de mécanismes favorisant les livraisons fréquentes (sprint, release)
+    \item Une acceptation du changement (via un backlog dynamique)
 \end{itemize}
-La figure \ref{ScrumCycle} présente une vue d'ensemble de son cycle de vie. Cette méthode est très attractive de par son approche du développement incrémental de produit sous forme de releases (versions systèmes opérationnelles). Néanmoins, travaillant uniquement avec l'encadrant à l'entreprise sur le projet présent, et l'équipe de développement se résumant simplement en ma personne, la mise de l'accent sur la collaboration entre les membres de l'équipe et la prescription de nombreux cérémoniaux à cet effet la rend plus adaptée pour des équipes de développement plus élaborées.
-\   \\
-Dans le but de tirer profit des points forts de RUP tout en suivant une approche agile, s'inspirant notamment de SCRUM, nous avons choisi de suivre une méthode hybride, flexible, permettant de tirer partie des principaux attraits des approches précedemment citées : Disciplined Agile Delivery ou l'agile discipliné. Celle-ci est présentée en détail dans la prochaine section.
+La figure \ref{ScrumCycle} présente une vue d'ensemble de son cycle de vie. Cette méthode est très attractive de par son approche du développement incrémental de produit sous forme de releases (versions systèmes opérationnelles). Néanmoins, travaillant uniquement avec l'encadrant côté entreprise sur le projet présent, l'équipe de développement se résume simplement en ma personne. La mise de l'accent sur la collaboration entre les membres de l'équipe et la prescription de nombreux cérémoniaux à cet effet rend la méthode plus adaptée aux équipes plus élaborées.\\
+\\
+Dans le but de tirer profit des points forts de RUP tout en suivant une approche agile, s'inspirant notamment de SCRUM, nous avons choisi de suivre une méthode hybride, flexible, permettant de tirer partie des principaux attraits des approches précedemment citées : Disciplined Agile Delivery (ou l'agile discipliné). Celle-ci est présentée en détail dans la prochaine section.
 
 %-----------------------------------------------------------------------------------
 \subsection{Présentation de la méthodologie}
+Disciplined Agile Delivery (DAD) est un cadre hybride qui s'appuie sur la base solide d'autres méthodes et cadres de processus logiciels. Le framework adopte des pratiques et des stratégies à partir de sources existantes et fournit des conseils pour savoir quand et comment les appliquer ensemble. Des méthodes telles que Scrum, Extreme Programming (XP), Kanban et Agile Modeling (AM) fournissent les briques de processus et DAD le mortier pour les ajuster efficacement. L'un des avantages du développement de logiciel agile et lean réside dans la richesse des pratiques, des techniques et des stratégies à disposition. C'est aussi l'un de ses plus grands défis car, sans quelque chose comme le cadre DAD, il est difficile de savoir vers lesquelles s'orienter et comment les intégrer.\\
+Le diagramme \ref{fig:triphase} suivant montre une vue de haut niveau du cycle de vie de la DAD. C'est un cycle de vie triphasé où l'on crée progressivement une solution consommable au fil du temps.\\
 
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.8]{organigramme.png}
+\caption{Organigramme de l'entreprise}
+\label{fig:triphase}
+\end{figure}
+\\
+Évidemment, il y a à la méthode plus que montre le diagramme précedent. DAD vise à être le moins prescriptif possible et s'efforce à s'adapter et à refléter la réalité du mieux possible. Quatre propositions du cycle de vie s'en suivent :
+\begin{itemize}
+    \item Une version agile / basique qui prolonge le cycle de vie Scrum (Construction) avec des idées éprouvées de RUP
+    \item Un cycle de vie avancé / Lean
+    \item Un cycle de vie de livraison continu Lean
+    \item Un cycle de vie exploratoire "Lean Startup"
+\end{itemize}\\
+
+Notre choix s'est porté sur le cycle hybride, entre RUP \& SCRUM. La figure \ref{fig:rup_scrum_dad} le présente plus en détail.
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.8]{organigramme.png}
+\caption{Organigramme de l'entreprise}
+\label{fig:rup_scrum_dad}
+\end{figure}
+
+Avec DAD, nous adoptons une approche axée sur les objectifs. Cette approche lui permet d'éviter d'être prescriptif et donc plus souple et plus adapté à notre situation. DAD indique simplement qu'il y a plusieurs problèmes entourant un objectif, dont l'on doit tenir compte, et propose plusieurs techniques pratiques à envisager pour le réaliser. DAD va plus loin encore et décrit les avantages et les inconvénients de chaque technique et dans quelles situations elle convient le mieux. Il convoit que certaines options conviennent pour la plupart des cas, et les recommande généralement, tout en fournissant des alternatives pour les scénarios atypiques. Le diagramme de la figure \ref{fig:initialGoal} (en anglais) indique quelques choix effectués à l'aide de cette approche relativement à la phase initiale.
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.8]{organigramme.png}
+\caption{Organigramme de l'entreprise}
+\label{fig:initialGoal}
+\end{figure}
+
+L'illustration \ref{fig:rup_scrum_dad} introduit le concept d'articles de travail ou "Work Items", assimilable au concept de Backlog de Scrum. Le Backlog faot office de carnet de fonctions, priorisées, contenant de courtes descriptions de toutes les fonctionnalités souhaitées dans le produit. La différence réside dans l'extensibilté de concept pour inclure des éléments outre fonctonnels (tel que l'élaboration de réunions, de formations, etc).\\
+DAD intègre aussi un certain nombre de jalons légers, ordonnés dans le temps, dans ses cycles de vie, et ce afin de guider et de mesurer les progrès et la santé d'un projet. Ils sont dépictés en bas de la figure \ref{fig:rup_scrum_dad} :
+\begin{itemize}
+    \item Vision des parties prenantes : entente générale sur l'objectif du projet entre les différentes parties prenantes
+    \item Architecture éprouvée : bonne pratique pour l'atténuation précoce des risques liés au bon fonctionneemnt global du système
+    \item Viabilité du projet (à multiples occurences, optionnel) :  à certains moments pendant le projet, les parties prenantes peuvent demander un point de contrôle pour s'assurer que le projet progresse conformément à la vision convenue, et choisir de la mettre à jour le si nécessaire
+    \item Fonctionnalité suffisante : généralement vers la fin de la phase de constrcution
+    \item Prêt à la production : pour les situations non triviales, une phase de transition formelle est souvent nécessaire pour faire les préparatifs finaux dans le cadre de la livraison de la solution aux parties prenantes. À un moment donné, il faut décider que la solution est prête à être produite
+    \item Parties prenantes satisfaites : les organismes de gouvernance et les autres parties sont informés quand l'initiative est officiellement terminée, afin qu'elles puissent initier une prochaine version ou diriger leurs fonds ailleurs
+\end{itemize}
+Le journal de travail inclut les différents jalons encontrés tout au long de l'exécution du projet.
+
+
+%==============================================================================
+\section{Journal de travail}
+Le diagramme de la figure \ref{fig:gantt} permet de visualiser l'avancement du travail effectué au fil du temps :
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.8]{organigramme.png}
+\caption{Organigramme de l'entreprise}
+\label{fig:gantt}
+\end{figure}
+
+
+%==============================================================================
+\section*{Conclusion}
+Dans ce chapitre, nous avons présenté le cadre général de travail, en commençant par la présentation de l'entreprise, en passant par la problématique et les motivations qui lui ont donné naissance. Pour finir, nous avons clarifié les choix méthodologiques effectués pour guider sa mise en œuvre en introduisant les concepts clés de la méthodologie de travail ainsi que des étapes effectuées tout au long de la réalisation du projet.
 
 
 %==============================================================================
