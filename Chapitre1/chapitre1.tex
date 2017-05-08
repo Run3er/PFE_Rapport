@@ -19,7 +19,7 @@
 %==============================================================================
 \section*{Introduction}
 Avant de commencer à détailler le travail réalisé, il est indispensable d'introduire l'organisme d'accueil afin de se familiariser avec son domaine d'activité, la situation actuelle qui l'a motivé à entreprendre le projet traité au cours de ce rapport, ainsi que son orientation pour le futur.\\
-Une fois entamée, nous enchaînerons avec la présentation de la problématique, suivie d'une description sommaire du sujet du projet et des concepts clés associés. Nous concluerons avec une présentation de la méthodologie de travail adoptée tout au long de la mise en œuvre du projet.
+Une fois entamée, nous enchaînerons avec la présentation de la problématique, suivie d'une description sommaire du sujet du projet et des concepts clés associés. Nous concluerons avec la présentation de la méthodologie de travail adoptée tout au long de la mise en œuvre du projet.
 
 
 %==============================================================================
@@ -95,7 +95,7 @@ Plus récemment, l'entreprise aspire à élargir son éventail d'offres et entre
 
 
 %==============================================================================
-\section{Problématiques et motivations}
+\section{Problématique et motivations}
 De nos jours, la gestion de projet s'impose dans les structures de toutes tailles comme le mode d'organisation par excellence.\\
 Un projet désigne un ensemble finalisé d'activités et d'actions entreprises dans le but de répondre à un besoin, soumis à des contraintes bien définies, généralement dans des délais fixés avec une allocation budgétaire plafonnée. La gestion de projet quant à elle, représente la démarche visant à organiser de bout en bout le bon déroulement d'un projet.\\
 Celle-ci revient généralement à la gestion de multiples facettes, notamment :
@@ -123,6 +123,7 @@ Outre l'apport de l'application pour la gestion de ses propres projets en intern
 %==============================================================================
 \section{Méthodologie de travail}
 Pour la réalisation d'un projet informatique d'envergure, il est indispensable de suivre une méthodologie de travail bien établie, prenant en compte les spécificités du projet, et ce dans le but de garantir un niveau optimal de rendement tout au long de sa réalisation.
+
 %-----------------------------------------------------------------------------------
 \subsection{Choix de la méthodologie}
 Les avancées majeures dans l'univers de l'informatque ont été accompagnées d'une révolution dans la manière de faire et de penser pour produire des logiciels. Celle-ci a éventuellement donnée naissance au processus unifié et au mouvement de déveoppement agile, qui se caractérisent par le développement itératif et incrémental.\\
@@ -161,13 +162,13 @@ Dans le but de tirer profit des points forts de RUP tout en suivant une approche
 %-----------------------------------------------------------------------------------
 \subsection{Présentation de la méthodologie}
 Disciplined Agile Delivery (DAD) est un cadre hybride qui s'appuie sur la base solide d'autres méthodes et cadres de processus logiciels. Le framework adopte des pratiques et des stratégies à partir de sources existantes et fournit des conseils pour savoir quand et comment les appliquer ensemble. Des méthodes telles que Scrum, Extreme Programming (XP), Kanban et Agile Modeling (AM) fournissent les briques de processus et DAD le mortier pour les ajuster efficacement. L'un des avantages du développement de logiciel agile et lean réside dans la richesse des pratiques, des techniques et des stratégies à disposition. C'est aussi l'un de ses plus grands défis car, sans quelque chose comme le cadre DAD, il est difficile de savoir vers lesquelles s'orienter et comment les intégrer.\\
-Le diagramme \ref{fig:triphase} suivant montre une vue de haut niveau du cycle de vie de la DAD. C'est un cycle de vie triphasé où l'on crée progressivement une solution consommable au fil du temps.\\
+Le diagramme \ref{fig:triphaseCycleDAD} suivant montre une vue de haut niveau du cycle de vie de la DAD. C'est un cycle de vie triphasé où l'on crée progressivement une solution consommable au fil du temps.\\
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.8\linewidth]{organigramme.jpg}
-\caption{Organigramme de l'entreprise}
-\label{fig:triphase}
+\includegraphics[width=0.8\linewidth]{triphaseCycleDAD.jpg}
+\caption{Cycle de vie haut niveau de la DAD}
+\label{fig:triphaseCycleDAD}
 \end{figure}
 \\
 Évidemment, il y a à la méthode plus que montre le diagramme précedent. DAD vise à être le moins prescriptif possible et s'efforce à s'adapter et à refléter la réalité du mieux possible. Quatre propositions du cycle de vie s'en suivent :
@@ -178,21 +179,21 @@ Le diagramme \ref{fig:triphase} suivant montre une vue de haut niveau du cycle d
     \item Un cycle de vie exploratoire "Lean Startup"
 \end{itemize}\\
 
-Notre choix s'est porté sur le cycle hybride, entre RUP \& SCRUM. La figure \ref{fig:rup_scrum_dad} le présente plus en détail.
+Notre choix s'est porté sur le cycle hybride, entre RUP \& SCRUM. La figure \ref{fig:ScrumRUPcycleDAD} le présente plus en détail.
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.8\linewidth]{organigramme.jpg}
-\caption{Organigramme de l'entreprise}
-\label{fig:rup_scrum_dad}
+\includegraphics[width=1\linewidth]{ScrumRUPcycleDAD.jpg}
+\caption{Cycle de vie basique de la DAD}
+\label{fig:ScrumRUPcycleDAD}
 \end{figure}
 
-Avec DAD, nous adoptons une approche axée sur les objectifs. Cette approche lui permet d'éviter d'être prescriptif et donc plus souple et plus adapté à notre situation. DAD indique simplement qu'il y a plusieurs problèmes entourant un objectif, dont l'on doit tenir compte, et propose plusieurs techniques pratiques à envisager pour le réaliser. DAD va plus loin encore et décrit les avantages et les inconvénients de chaque technique et dans quelles situations elle convient le mieux. Il convoit que certaines options conviennent pour la plupart des cas, et les recommande généralement, tout en fournissant des alternatives pour les scénarios atypiques. Le diagramme de la figure \ref{fig:initialGoal} (en anglais) indique quelques choix effectués à l'aide de cette approche relativement à la phase initiale.
+Avec DAD, nous adoptons une approche axée sur les buts. Cette approche lui permet d'éviter d'être prescriptif et donc plus souple et plus adapté à notre situation. DAD indique simplement qu'il y a plusieurs problèmes entourant un but, dont l'on doit tenir compte, et propose plusieurs techniques pratiques à envisager pour le réaliser. DAD va plus loin encore et décrit les avantages et les inconvénients de chaque technique et dans quelles situations elle convient le mieux. Il convoit que certaines options conviennent pour la plupart des cas, et les recommande généralement, tout en fournissant des alternatives pour les scénarios atypiques. Le diagramme de la figure \ref{fig:goalsDAD} indique l'ensemble des buts de haut niveau associés à chaque phase de l'approche.
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.8\linewidth]{organigramme.jpg}
-\caption{Organigramme de l'entreprise}
-\label{fig:initialGoal}
+\includegraphics[width=0.95\linewidth]{goalsDAD.jpg}
+\caption{Buts associés aux phases de la DAD}
+\label{fig:goalsDAD}
 \end{figure}
 
 L'illustration \ref{fig:rup_scrum_dad} introduit le concept d'articles de travail ou "Work Items", assimilable au concept de Backlog de Scrum. Le Backlog faot office de carnet de fonctions, priorisées, contenant de courtes descriptions de toutes les fonctionnalités souhaitées dans le produit. La différence réside dans l'extensibilté de concept pour inclure des éléments outre fonctonnels (tel que l'élaboration de réunions, de formations, etc).\\
@@ -207,18 +208,29 @@ DAD intègre aussi un certain nombre de jalons légers, ordonnés dans le temps,
 \end{itemize}
 Le journal de travail inclut les différents jalons encontrés tout au long de l'exécution du projet.
 
-
-%==============================================================================
-\section{Journal de travail}
+%-----------------------------------------------------------------------------------
+\subsection{Journal de travail}
 Le diagramme de la figure \ref{fig:gantt} permet de visualiser l'avancement du travail effectué au fil du temps :
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.8\linewidth]{organigramme.jpg}
-\caption{Organigramme de l'entreprise}
+\includegraphics[width=1\linewidth]{gantt.png}
+\caption{Diagramme de Gantt de l'avancement du projet}
 \label{fig:gantt}
 \end{figure}
 
+%%%%% +++ Git workflow +++ %%%%%%
+
+Le diagramme à la figure \ref{fig:gitFrontEnd} permet de visualiser l'avancement de la phase de construction au fil du temps sous forme de fréquence de commit de code :
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=1\linewidth]{gitFrontEnd.png}
+\caption{Diagramme de commits Git}
+\label{fig:gitFrontEnd}
+\end{figure}
+
+%%%%% +++ Trello Backlog peak +++ %%%%%%
 
 %==============================================================================
 \section*{Conclusion}
