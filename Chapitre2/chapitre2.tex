@@ -19,7 +19,53 @@
 
 %==============================================================================
 \section*{Introduction}
-Après avoir présenté le cadre général de notre projet et le cœur du sujet, nous entamons par le biais de ce chapitre une étude théorique, préface à sa réalisation. L'étude de l'existant sera l'opportunité de présenter plus en détail la problématique rencontrée. Une mise au point sur l'état des lieux de la gestion de projets du côté des clients de l'entreprise attestera de l'intérêt du projet pour un usage externe à l'entreprise. Enfin, une vue d'ensemble de solutions similaires présentes sur le marché permettra de se faire une idée globale sur les fonctionnalités à attendre du produit.
+Après avoir présenté le cadre général de notre projet et le cœur du sujet, nous entamons par le biais de ce chapitre une étude théorique, préface à sa réalisation. Nous commençerons par présenter les notions de base associées à la partie métier du projet. Nous enchaînerons avec l'étude de l'existant, qui sera l'opportunité de présenter plus en détail la problématique rencontrée en interne par l'entreprise. Une mise au point sur l'état des lieux de la gestion de projet du côté des clients de l'entreprise attestera de l'intérêt du projet pour un usage externe. Enfin, une vue d'ensemble des solutions similaires présentes sur le marché permettra de se faire une idée globale sur les fonctionnalités à attendre du produit.
+
+
+%==============================================================================
+\section{La Gestion de Projet}
+Les entreprises se confrontent à de nombreux challenges au cours de leur évolution (adaptation à des contraintes externes, lancement de nouveaux services ou produits, intégration de nouvelles outils, mises à jour des processus, ...). Chaque défi est relevé sous forme de projet.\\
+Un projet est défini sous forme d'une suite d'actions délimitée dans le temps, en vue de produire un résultat spécifique, un produit, un service ou une nouvelle organisation.\\
+La gestion de projet a pour vocation de relever ces défis en mettant en place une organisation et une planification de l’ensemble des activités visant à assurer l’atteinte des objectifs du projet (qualité, coûts, délais), à effectuer leur suivi, anticiper les risques et les changements à mettre en œuvre  ainsi qu'à gérer la communication et la prise de décision.\\
+\\
+On peut regrouper les activités de gestion de projet sous deux phases :
+\begin{itemize}
+%    \item \textbf{} :
+    \item La phase d'organisation du projet
+    \item La phase de pilotage du projet
+\end{itemize}
+\\
+Ces activités sont précédées par une phase de collecte d'informations et d'étude de faisabilité. Cette phase d'avant projet permet de valider le projet et de décider des ressources à mobiliser pour sa mise en œuvre.
+% REF: http://ressources.aunege.fr/nuxeo/site/esupversions/6b35be1e-5317-4cd6-8db2-05485615219d
+% REF: http://www.gestiondeprojet.net
+%-----------------------------------------------------------------------------------
+\subsection{Phase d'organisation}
+La phase d'organisation comprend le développement des concepts définis dans la phase d'avant projet et la définition du référentiel du projet, en fournissant suffisamment de détails pour pouvoir entamer la phase de réalisation.\\
+Les principaux éléments du référentiel d'un projet incluent :
+\begin{itemize}
+%    \item \textbf{} :
+    \item \textbf{La charte du projet} : Elle est rédigée par le chef de projet dès son lancement. Elle est destinée à toutes les personnes appelées à travailler sur le projet, ainsi qu'aux tiers concernés (la hiérarchie, les chefs de service, ...). C'est un document de référence à usage strictement interne dont le but est de fournir les informations de base du projet : son objet, ses parties prenantes, ses enjeux, ses contraintes, etc.
+    \item \textbf{La structuration du projet} : La structure de découpage du projet (WBS \ref{ANAGRAMME: Organigramme des tâches}) organise et définit la totalité du contenu d'un projet. La structuration du projet dépend de nombreux paramètres (le type de gestion, la complexité, la structure de l'organisation, la disponibilité des ressources, ...) et a pour objectif de découper le projet en plus petits éléments, plus faciles à gérer, afin de pouvoir définir des coûts et des durées pour chaque élément, ainsi que des résultats tangibles et mesurables.
+    \item \textbf{Le planning de référence} : La planification d'un projet est l’activité qui consiste à déterminer et à ordonnancer les tâches du projet, à estimer leurs charges et à déterminer les profils nécessaires à leur réalisation. Le planning résultant inclut la liste des tâches et leurs antériorités, la définition des lots de travaux ainsi que les ressources associées.
+    \item \textbf{Le plan de communication} : C'est un document qui présente les méthodes et les modalités adoptées pour collecter, conserver et diffuser l'information, les destinataires de chaque type d'information (rapport, document technique, ...), ainsi que les responsabilités associées.
+    \item \textbf{Le budget de référence} : Résultat de l'analyse des coûts rattachés au projet, il est établi à partir de la liste des activités, des ressources associées et du planning de référence.
+    \item \textbf{L'analyse des risques} : Elle comporte un recensement des aléas majeurs associés au projet ainsi que les plans d'action et les mesures préventives à mettre en place.
+\end{itemize}
+
+%-----------------------------------------------------------------------------------
+\subsection{Phase de pilotage}
+Une fois budgétisé, organisé et planifié, le projet démarre. Le pilotage du projet permet de comparer le réalisé avec le prévisionnel, et de réviser éventuellement les plannings et les charges.\\
+Le chef de projet et son équipe s'efforcent de respecter le référentiel de gestion du projet, tout en mesurant les écarts constatés. Cela inclut la maîtrise des aspects suivants :
+\begin{itemize}
+%    \item \textbf{}} :
+    \item \textbf{Les délais} : Le chef de projet recueille l'information sur l'avancement réel du projet à partir de l'avancement de chaque tâche, et identifie les retards actuels et potentiels. Dès lors, des actions correctives peuvent être mises en place afin de corriger les écarts (modification du planning, réallocation de ressources, ...).
+    \item \textbf{Les coûts} : Une évaluation de la consommation budget est fréquemment entreprise, suivie d'une réestimation du budget qui reste à consommer. Le coût total prévu comparé au budget de référence permet d'analyser et d'anticiper des écarts ainsi que d'identifier les causes de dépassement.
+    \item \textbf{Les modifications} : Elles sont le résultat d'événements extérieurs (changement de réglementation, changement demandé par le client, erreurs ou oublis dans la définition initiale, ...). Les demandes de changements peuvent apparaître sous plusieurs formes et conduire à un élargissement ou à une limitation du contenu et doivent être traitées grâce un ensemble de procédures formelles.
+    \item \textbf{Les risques} : La maîtrise des risques permet d'identifier, de quantifier, de réduire ainsi que de suivre les risques encourus tout au long de la vie du projet.
+\end{itemize}
+Le chef de projet se focalise essentiellement sur la maîtrise des délais et des coûts.\\
+
+L'usage d’indicateurs de pilotage est crucial pour le pilotage efficace d'un projet. Ces outils d'assistance à la décision permettent de mesurer de manière pratique une situation ou un risque, d'alerter ou au contraire de signifier l'avancement correct d'un projet.
 
 
 %==============================================================================
@@ -86,28 +132,28 @@ Le problème de gestion de projet est aussi vieux que le concept de projet lui-m
 Les solutions présentes sur le marché se distinguent les unes des autres surtout par le niveau de fonctionnalités offert, et le domaine d'application cible. En effet, des solutions populaires, telle que JIRA \ref{JIRA}, se limitent à un domaine très particulier, en l'occurence la gestion de projets agiles pour cette dernière. Les solutions étudiées aspirent à être le plus générique possible, capable d'être employées dans n'importe quel contexte de projet. L'échantillon exposé ci-dessous vise à présenter une vue d'ensemble des caractéristiques communes et distinctives des solutions les plus populaires sur le marché, qui partagent cette vision.
 
 \subsubsection*{MS Projects} %-------------------------------------------------------------------------
-Microsoft Projects a su s'imposer pendant longtemps en tant que solution de facto pour les besoins de gestion de projet en entreprise. Faisant partie de la suite logicille de la firme, MS Projects ne fait pas exception et s'intègre pleinement à sa plateforme collaborative \ref{Office 365}, ce qui représente un réel bénéfice pour les clients ayant déja opté pour l'intégration de leurs données sur cette dernière. Le logiciel continue d'introduire un nombre de fonctionnalités avancées avec ses mises à jour. Ceci le rend particulièrement adapté aux besoins poussés de gestion de projet. Les utilisateurs expérimentés y trouvent leur compte, mais la courbe d'apprentisage est souvent pénible pour les utilisateurs novices et s'avère être trop complexe pour les usagers se limitant en besoin à un nombre restreint de ses fonctionnalités.
+Microsoft Projects a su s'imposer pendant longtemps en tant que solution de facto pour les besoins de gestion de projet en entreprise. Faisant partie de la suite logicille de la firme, MS Projects ne fait pas exception et s'intègre pleinement à sa plateforme collaborative \ref{Office 365}, ce qui représente un réel bénéfice pour les clients ayant déja opté pour l'intégration de leurs données sur cette dernière. Le logiciel continue d'introduire un nombre de fonctionnalités avancées avec ses mises à jour. Ceci le rend particulièrement adapté aux besoins poussés de gestion de projet. Les utilisateurs expérimentés y trouvent leur compte, cependant la courbe d'apprentisage est souvent pénible pour les novices et s'avère être trop complexe pour les usages se limitant en besoin à un nombre restreint de ses fonctionnalités.
 
 \subsubsection*{ProjectManager.com} %------------------------------------------------------------------
-ProjectManager.com couvre très bien les fonctionnalités de base de gestion de projet et parmi toutes les solutions étudiées, s'apparente le plus à la vision initiale élaborée. Cette solution, disponible sous une offre SaaS \ref{SaaS}, s'adapte parfaitement aux besoins des petites et moyennes entreprises, qui retrouvent une simplicité d'usage associée à une couverture plus que décente des piliers de la gesion professionnel de projet.
+ProjectManager.com couvre très bien les fonctionnalités de base de gestion de projet et, parmi toutes les solutions étudiées, s'apparente le plus à la vision initiale élaborée. Cette solution, disponible sous une offre SaaS \ref{SaaS}, s'adapte parfaitement aux besoins des petites et moyennes entreprises, qui retrouvent une simplicité d'usage associée à une couverture plus que décente des piliers de la gesion professionnelle de projet.
 
 \subsubsection*{Zoho Projects} %-----------------------------------------------------------------------
-Zoho propose une suite logiceille qui répond aux besoins des particuilers et des entreprises. Dans cette optique, sa solution de gestion de projet s'intègre parfaitement avec qualques uns de ses autres produits, afin d'étendre ses fonctionnalités. La solution se veut simple, mais complète, en offrant un éventail éttoffé de fonctionnalités pour la gestion des divers facettes d'un projet. Elle se caractérise par une attention particuière apportée à l'ergonomie et au confort d'utilisation.
+Zoho propose une suite logiceille qui répond aux besoins des particuilers et des entreprises. Dans cette optique, sa solution de gestion de projet s'intègre parfaitement avec quelques uns de ses autres produits, afin d'étendre ses fonctionnalités. La solution se veut simple, mais complète, en offrant un éventail éttoffé de fonctionnalités, pour la gestion des divers facettes d'un projet. Elle se caractérise par une attention particuière apportée à l'ergonomie et au confort général d'utilisation.
 
-\subsubsection*{EasyProject} %-----------------------------------------------------------------------------
-Redmine est la solution open source la plus complète disponible sur le marché. Cependant, son manque d'intuitivité et le faible niveau d'ergonomie offert, associés à son interface datée, nuisent à son potentiel et en font une solution peu courante d'usage dans la pratique. C'est tout d'abord dans le but d'accroître son utilisabilité, tout en prenant avantage de la base de fonctionnalités existante, que la solution EasyProject offre une version commerciale, basée sur cette solution. Depuis, la solution s'est vu évoluer vers l'une des solutions les plus abouties du marché.
+\subsubsection*{EasyProject (EasyRedmine)} %-----------------------------------------------------------------------------
+Redmine est la solution open source la plus complète disponible sur le marché. Cependant, son manque d'intuitivité et le faible niveau d'ergonomie offert, associés à son interface datée, nuisent à son potentiel et en font une solution peu courante d'usage dans la pratique. C'est tout d'abord dans le but d'accroître son utilisabilité, tout en prenant avantage de la base de fonctionnalités existante, que la solution EasyProject offre une version commerciale, basée sur cette solution. Depuis, l'application s'est vu évoluer vers l'une des solutions les plus abouties du marché.
 
 \subsubsection*{Clarizen} %-----------------------------------------------------------------------------
-Due à l'amélioration continue de son produit et à la complétude de sa vision, l'entreprise Clarizen a vu son produit se hisser à la position de Leader dans dans les classements Gartner et Forrester de 2016 \ref{clarizen.com} dans la catégorie de solutions SaaS de gestion de projets. De ce fait, ce produit a sans nul doute sa place dans notre étude, et impose une fine synthèse de ses traits caractéristiques qi lui valent son succès.
+Due à l'amélioration continue de son produit et à la complétude de sa vision, l'entreprise Clarizen a vu son produit se hisser à la position de Leader dans dans les classements Gartner et Forrester de 2016 \ref{clarizen.com}, dans la catégorie de solutions SaaS de gestion de projets. De ce fait, ce produit a sans nul doute sa place dans notre étude et impose une fine synthèse des traits caractéristiques qui lui valent son succès.
 \\
 
-Dans le but de présenter un échantillon pertinent de l'existant sur le marché, plusieurs solutions ont été omises, notamment pour des raisons de redondance ou de pauvreté en termes de fonctionnalités. Nous enchaînons avec la mise en relief des points communs et distinctifs de chacune dans la partie qui suit.
+Dans le but de présenter un échantillon pertinent de l'existant sur le marché, plusieurs solutions ont été omises, notamment pour des raisons de redondance ou de pauvreté en termes de fonctionnalités.\\
+Nous enchaînons avec la mise en relief des points communs et distinctifs de chacune dans la partie qui suit.
 
 %-----------------------------------------------------------------------------------
 \subsection{Critique des solutions existantes}
 
-\subsubsection*{Points communs} %-----------------------------------------------------------------------------
-Les solutions retenues partagent un tronc commun de fonctionnalités destinées à la gestion des aspects cruciaux d'un projet, primordialement :
+Les solutions retenues partagent un tronc commun de fonctionnalités destiné à la gestion des aspects cruciaux d'un projet, à savoir :
 
 \begin{itemize}
     \item \textbf{La plannification} :
@@ -116,10 +162,12 @@ Les solutions retenues partagent un tronc commun de fonctionnalités destinées 
 \
 
 
-\subsubsection*{Points distinctifs} %-----------------------------------------------------------------------------
+%\subsubsection*{Points distinctifs} %-----------------------------------------------------------------------------
 
 \begin{table}[h]
 \centering
+\caption{Comparatif des solutions de gestion de projet présentées}
+\label{comparatifSolutionsEtudiees}
 \begin{tabular}{|l|1|1|1|l|1|}
 \hline
 % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
@@ -163,9 +211,6 @@ Les solutions retenues partagent un tronc commun de fonctionnalités destinées 
         Gestion du portfolio & & & & & \\
 \hline
 \end{tabular}
-\caption{Comparatif des solutions de gestion de projet présentées}
-\label{comparatifSolutionsEtudiees}
-
 \end{table}
 
 
