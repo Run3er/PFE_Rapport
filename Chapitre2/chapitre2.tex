@@ -21,6 +21,7 @@
 \section*{Introduction}
 Après avoir présenté le cadre général de notre projet et le cœur du sujet, nous entamons par le biais de ce chapitre une étude théorique, préface à sa réalisation. L'étude de l'existant sera l'opportunité de présenter plus en détail la problématique rencontrée. Une mise au point sur l'état des lieux de la gestion de projets du côté des clients de l'entreprise attestera de l'intérêt du projet pour un usage externe à l'entreprise. Enfin, une vue d'ensemble de solutions similaires présentes sur le marché permettra de se faire une idée globale sur les fonctionnalités à attendre du produit.
 
+
 %==============================================================================
 \section{Étude de l'existant}
 L'étude de l'existant permet d'identifier les points forts ainsi que les points faibles de la démarche existante. Cette étude permettra de bien cibler les besoins de l'entreprise, en vue d'en tenir compte lors de la conception et du développement de la solution.
@@ -77,14 +78,98 @@ Ce nombre abondant de limitations impose pour l'entreprise une révolution dans 
 
 
 %==============================================================================
-\section{Étude des solutions disponibles sur le marché}
+\section{Étude des solutions existantes sur le marché}
+Le problème de gestion de projet est aussi vieux que le concept de projet lui-même. En conséquence, un nombre important de solutions logicielles d'aide à la gestion de projet est disponible aujourd'hui sur le marché. Dans le but de produire une solution de qualité, une étude de l'existant s'impose afin de prendre en considération les points forts et les points faibles des solutions existantes. Celle-ci servira surtout à nous guider dans l'élaboration de la vision de notre produit.
+
 %-----------------------------------------------------------------------------------
 \subsection{Présentation des solutions existantes}
+Les solutions présentes sur le marché se distinguent les unes des autres surtout par le niveau de fonctionnalités offert, et le domaine d'application cible. En effet, des solutions populaires, telle que JIRA \ref{JIRA}, se limitent à un domaine très particulier, en l'occurence la gestion de projets agiles pour cette dernière. Les solutions étudiées aspirent à être le plus générique possible, capable d'être employées dans n'importe quel contexte de projet. L'échantillon exposé ci-dessous vise à présenter une vue d'ensemble des caractéristiques communes et distinctives des solutions les plus populaires sur le marché, qui partagent cette vision.
+
+\subsubsection*{MS Projects} %-------------------------------------------------------------------------
+Microsoft Projects a su s'imposer pendant longtemps en tant que solution de facto pour les besoins de gestion de projet en entreprise. Faisant partie de la suite logicille de la firme, MS Projects ne fait pas exception et s'intègre pleinement à sa plateforme collaborative \ref{Office 365}, ce qui représente un réel bénéfice pour les clients ayant déja opté pour l'intégration de leurs données sur cette dernière. Le logiciel continue d'introduire un nombre de fonctionnalités avancées avec ses mises à jour. Ceci le rend particulièrement adapté aux besoins poussés de gestion de projet. Les utilisateurs expérimentés y trouvent leur compte, mais la courbe d'apprentisage est souvent pénible pour les utilisateurs novices et s'avère être trop complexe pour les usagers se limitant en besoin à un nombre restreint de ses fonctionnalités.
+
+\subsubsection*{ProjectManager.com} %------------------------------------------------------------------
+ProjectManager.com couvre très bien les fonctionnalités de base de gestion de projet et parmi toutes les solutions étudiées, s'apparente le plus à la vision initiale élaborée. Cette solution, disponible sous une offre SaaS \ref{SaaS}, s'adapte parfaitement aux besoins des petites et moyennes entreprises, qui retrouvent une simplicité d'usage associée à une couverture plus que décente des piliers de la gesion professionnel de projet.
+
+\subsubsection*{Zoho Projects} %-----------------------------------------------------------------------
+Zoho propose une suite logiceille qui répond aux besoins des particuilers et des entreprises. Dans cette optique, sa solution de gestion de projet s'intègre parfaitement avec qualques uns de ses autres produits, afin d'étendre ses fonctionnalités. La solution se veut simple, mais complète, en offrant un éventail éttoffé de fonctionnalités pour la gestion des divers facettes d'un projet. Elle se caractérise par une attention particuière apportée à l'ergonomie et au confort d'utilisation.
+
+\subsubsection*{EasyProject} %-----------------------------------------------------------------------------
+Redmine est la solution open source la plus complète disponible sur le marché. Cependant, son manque d'intuitivité et le faible niveau d'ergonomie offert, associés à son interface datée, nuisent à son potentiel et en font une solution peu courante d'usage dans la pratique. C'est tout d'abord dans le but d'accroître son utilisabilité, tout en prenant avantage de la base de fonctionnalités existante, que la solution EasyProject offre une version commerciale, basée sur cette solution. Depuis, la solution s'est vu évoluer vers l'une des solutions les plus abouties du marché.
+
+\subsubsection*{Clarizen} %-----------------------------------------------------------------------------
+Due à l'amélioration continue de son produit et à la complétude de sa vision, l'entreprise Clarizen a vu son produit se hisser à la position de Leader dans dans les classements Gartner et Forrester de 2016 \ref{clarizen.com} dans la catégorie de solutions SaaS de gestion de projets. De ce fait, ce produit a sans nul doute sa place dans notre étude, et impose une fine synthèse de ses traits caractéristiques qi lui valent son succès.
+\\
+
+Dans le but de présenter un échantillon pertinent de l'existant sur le marché, plusieurs solutions ont été omises, notamment pour des raisons de redondance ou de pauvreté en termes de fonctionnalités. Nous enchaînons avec la mise en relief des points communs et distinctifs de chacune dans la partie qui suit.
 
 %-----------------------------------------------------------------------------------
 \subsection{Critique des solutions existantes}
 
+\subsubsection*{Points communs} %-----------------------------------------------------------------------------
+Les solutions retenues partagent un tronc commun de fonctionnalités destinées à la gestion des aspects cruciaux d'un projet, primordialement :
 
+\begin{itemize}
+    \item \textbf{La plannification} :
+%    \item \textbf{} :
+\end{itemize}
+\
+
+
+\subsubsection*{Points distinctifs} %-----------------------------------------------------------------------------
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|1|1|1|l|1|}
+\hline
+% after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+        Caractéristiques & MS Projects & P.M .com & Zoho Projects & EasyProject & Clarizen\\
+\hline
+        Type & Bureau \& Local* & SaaS & SaaS & SaaS \& Local & SaaS\\
+
+\hline
+        Workflow & & & & & \\
+
+
+\hline
+        WBS ✓ & & & & ✓ & \\
+\hline
+        Diagramme de Gantt & ✓ & ✓ & ✓ & ✓ & ✓ \\
+\hline
+        Reporting & ✓ & ✓ & ✓ & ✓ & ✓ \\
+\hline
+        Jalonnage & & & & ✓ & \\
+\hline
+        Gestion budget & & & & & \\
+\hline
+        Gestion des charges & & & & & \\
+\hline
+        Gestion des risques & & & & & \\
+\hline
+        Gestion de l'avancement & & & & & \\
+\hline
+        Niveaux projet & & & & & \\
+\hline
+        Workflow & & & & & \\
+\hline
+        GED & & & & & \\
+\hline
+        Terminaux mobiles & (Web? & )App & & & & \\
+\hline
+        Intégration & & & Slack, ... & & \\
+\hline
+        Standardisation PMP & & & & ✓ & \\
+\hline
+        Gestion du portfolio & & & & & \\
+\hline
+\end{tabular}
+\caption{Comparatif des solutions de gestion de projet présentées}
+\label{comparatifSolutionsEtudiees}
+
+\end{table}
+
+
+Cependant, vu son expertise en développement d'applications, IT SERV a choisi de développer son propre logiciel d'aide à la gestion de projet.
 
 %==============================================================================
 \section*{Conclusion}
