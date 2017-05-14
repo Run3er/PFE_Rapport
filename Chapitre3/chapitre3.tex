@@ -1,5 +1,5 @@
 \setcounter{chapter}{2}
-\chapter{INCEPTION}
+\chapter{PRÉPARATION AU LANCEMENT}
 \minitoc %insert la minitoc
 \graphicspath{{Chapitre3/figures/}}
 
@@ -19,14 +19,44 @@
 
 %==============================================================================
 \section*{Introduction}
-
-
-%==============================================================================
-\section{Spécifications générales}
-
+Avant d'appréhender le développment du système, il est primordial d'acquérir une compréhension claire des besoins des parties prenantes au projet, et des fonctionalités escomptées du système.\\
+Ce chapitre couronne l'étape d'élaboration de la vision de notre produit, par la spécification des besoins. La phase d'inception se poursuit avec l'édification de l'architecture globale du produit et le choix de l'environnement technique. Ces deux parties conclueront le chapitre et annoncent l'achèvement de la phase d'inception.
 
 %==============================================================================
-\section{Analyse fonctionnelle}
+\section{Analyse des besoins}
+L'analyse des besoins a pour objectif l'identification des acteurs du système et de leurs rôles, ainsi que la spécification des besoins et des contraintes contre lesquelles le produit final sera validé. Il existe deux types de besoins :
+\begin{itemize}
+    \item Les besoisn fonctionnels, qui présentent ce que l'utilisateur attend en terme de service
+    \item Les besoins non fonctionnels, qui présentent les contraintes sous lesquelles l'application doit être opérationnelle
+\end{itemize}
+
+%-----------------------------------------------------------------------------------
+\subsection{Objet global du projet}
+L'objectif du projet consiste à la conception, au développement, ainsi qu’au déploiement, d’une application web de gestion de projets, compatible avec tous les terminaux, de format réduit ou large, et disponible d’usage principalement en mode SaaS.\\
+Pour toute organisation cliente, l’application permettra essentiellement aux responsables, chefs de projet, de gérer les différents aspects des projets entrepris par leur organisation, ainsi que d’en monitorer l’état.\\
+
+Le produit final comportera ainsi deux parties distinctes :
+\begin{itemize}
+\item Une application web de gestion de projets en mode SaaS, ou à déploiement en interne
+    \item Une solution complémentaire pour la gestion de l’aspect SaaS
+\end{itemize}
+
+%-----------------------------------------------------------------------------------
+\subsection{Identification des acteurs}
+L’application est destinée à être acquise par une organisation de petite ou de grande envergure (entreprise, équipe, …). Au sein de celle-ci, nous pouvons distinguer entre trois types d'acteurs à rôles distincts pour notre système :
+\begin{itemize}
+    \item \textbf{L'administrateur} : C’est l'utilisateur associé au compte existant par défaut lors de l'acquisition de la solution. Il possède les pleins pouvoirs sur le reste des comptes et a la charge de créer le autres comptes au tout début de la mise en route de l'application.
+    \item \textbf{Un chef de projet} : C’est l'utilisateur fondamental du système. Il s'intéresse essentiellement à l'aspect de gestion de projets mais garde la possibilité de créer des comptes utilisateurs, à plus faible ou égal pouvoir, et de les gérer à sa guise.
+    \item \textbf{Un intervenant} : Cet utilisateur est généralement externe à l'organisation et a pour but de contribuer à la gestion d'un projet. Son compte est créé par un chef de projet, ou l'administrateur, lequel lui procure des droits d'accès à différentes parties d'un projet, son rôle se restraignant à intervenir sur ces parties.
+    \item \textbf{Un dirigeant} : Cet utilisateur, généralement interne à l'entreprise, s'intéresse et se limite uniquement à l'exploitation des fonctionalités de reporting offertes par le système, pour l'ensemble du portefeuille de projets. Son compte est créé et géré par l'administrateur.
+    \item \textbf{Une partie prenante} : Cet utilisateur se limite à l'exploitation des fonctionalités de reporting offertes par le système dans le cadre d'un projet. Son compte est créé et géré par un chef de projet.
+\end{itemize}
+
+%-----------------------------------------------------------------------------------
+\subsection{Spécification fonctionnelles}
+
+%-----------------------------------------------------------------------------------
+\subsection{Spécification non fonctionnelles}
 
 
 %==============================================================================
@@ -42,7 +72,7 @@
 
 %==============================================================================
 \section*{Conclusion}
-
+Le dénouement de la phase d'inception annonce le début de la phase de construction.
 
 %==============================================================================
 \end{spacing}
