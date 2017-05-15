@@ -171,14 +171,12 @@ Les détails techniques de l'architecture seront exposés au cours des sections 
 \subsection{Technologies de base}
 Pour traiter efficacement l'aspect SaaS du produit, un choix judicieux des technologies a été effectué préalablement au démarrage de la phase de développement. Nous procéderons à la présentation des technologies de base relatives à chacune des couches de notre architecture ainsi qu'à notre environnement de développement.
 
-%-----------------------------------------------------------------------------------
-\subsubsection*{Couche de présentation}
+\subsubsection*{Couche de présentation}%--------------------------------------------------------------------------------
 Pour réussir à développer un produit SaaS de qualité, on s'est orienté vers la mise en place d'une SPA (Single Page Application) pour la partie Front-end de notre application.\\
 
 Dû à sa notoriété et à notre familiarité avec lui, le framework AngularJS a été notre choix de référence. L'ampleur de la communauté active développée autour de lui ainsi que l'abondance des ressources associées et le succès notoire en soi du framework nous a convaincu à l'adoption du framework en tant que brique de base pour le développement de la couche Front-end.
 
-%-----------------------------------------------------------------------------------
-\subsubsection*{Couche métier}
+\subsubsection*{Couche métier}%-----------------------------------------------------------------------------------------
 La couche métier de notre application nécessite le développement d'un API, dont les services seront exposés à la couche supérieure.\\
 Vu les fonctionalités axées données (ressources) de notre application, nous nous sommes tournés vers la mise en place d'un API REST. En effet, dans notre cas, REST \ref{ANAGRAMME: REST} présente les avantages suivants :
 \begin{itemize}
@@ -194,14 +192,13 @@ Vu les fonctionalités axées données (ressources) de notre application, nous n
 Vu le succès retentissant des projets de l'entreprise d'accueil se reposant sur le langage Java, ainsi que notre familiarité avec le langage, il a été convenu dès le départ de l'adopter pour le développement en Back-end de notre produit.\\
 Pour l'édification de l'API REST, nous avons favorisé l'usage de technologies conuues. C'est ainsi que nous avons opté pour l'emploi de la suite Spring. Véritable framework pour la conception de bout en bout de solutions logicielles complètes en Java, Spring offre une panoplie d'outils pour assiter à la mise en place d'un API REST. Les technologies Spring employées seront présentées en détail au cours du chapitre \ref{chap: BACKEND}.
 
-%-----------------------------------------------------------------------------------
-\subsubsection*{Couche d'accès aux données}
+
+\subsubsection*{Couche d'accès aux données}%----------------------------------------------------------------------------
 Pour répondre aux besoins de gestion de données de notre application, nous avons procédé à une étude approfondie des systèmes de gestion de base de données disponibles sur le marché, répondant aux critères d'exigence définis par l'entreprise d'accueil. Cette étude sera exposée durant la section \ref{section: choix SGBDR} et aboutira à la détermination de la base de données à choisir pour les besoins de la couche d'accès aux données.
 
-%-----------------------------------------------------------------------------------
-\subsubsection*{Environnement de travail}
+\subsubsection*{Environnement de travail}%------------------------------------------------------------------------------
 Pour les besoins de versioning de notre travail, nous nous sommes reposés sur la solution Git.\\
-Git est un logiciel libre créé par l'auteur du noyau Linux. En 2016, il s’agissait du logiciel de gestion de versions le plus populaire utilisé \ref{↑ (en) « Git 2.8.2 Popular Source Code Management System Released with Over 18 Bug Fixes » [archive] , sur Softpedia, 2 mai 2016 (consulté le 2 mai 2016)}. Il se distingue par un système de gestion de versions décentralisé.\\
+Git est un logiciel libre créé par l'auteur du noyau Linux. En 2016, il s’agissait du logiciel de gestion de versions le plus populaire utilisé \ref{(en) « Git 2.8.2 Popular Source Code Management System Released with Over 18 Bug Fixes », sur Softpedia, 2 mai 2016 (consulté le 2 mai 2016)}. Il se distingue par un système de gestion de versions décentralisé.\\
 Le choix de ce système de gestion de versions est judicieux dans notre cas, car il permet de garder une version complète de l'historique d'un projet en local, ce qui s'avère très utile pour le développement continue au sein et hors de l'entreprise.\\
 
 La gestion de la liste des articles de travail ou du "Backlog" a été réalisée à l'aide de l'outil Trello.\\
@@ -209,10 +206,102 @@ Trello est à la base un outil de gestion de projet en ligne, lancé en septembr
 
 %-----------------------------------------------------------------------------------
 \subsection{Choix du système de gestion de base de données}
+Le choix du système de gestion de base de données est une étape cruciale pour le succès d'une application de type SaaS. L'étude suivante vise à mettre en exergue les fondations du choix de la solution retenue.\\
+
+\subsubsection{Spécifications}%----------------------------------------------------------------------------------------
+Commençons tout d’abord par spécifier les critères majeurs auxquels le système de gestion de données devra se plier :
+\begin{itemize}
+	\item \textbf{Disponibilité en open-source} :la licence associée à son exploitation devra permettre un usage commercial, sans imposer de frais relatifs à son obtention ou le dévoilement du code source propre à notre application
+	\item \textbf{Maturité} :être stable, éprouvé en milieu réel et prêt à la mise en production
+	\item \textbf{Structuration de données} :permettre de modéliser convenablement les données à persister
+	\item \textbf{Requêtage multidimensionnel} :être adapté au besoin principal d’aide à la décision à offrir via l’application
+	\item \textbf{Isolation de données} :permettre la séparation efficace des données relatives à chaque organisation, en conservant une certaine aisance d’utilisation
+	\item \textbf{Consistance de données} :garantir pour chaque organisation, à tout moment, la consistance de ses données (support, au minimum, des transactions intra-organisation)
+	\item \textbf{Durabilité de données} :offrir une persistance de données sure et infaillible (mécanismes de résistance aux pannes, pas de perte de donnée admise)
+	\item \textbf{Performance} :être optimisé pour la lecture tout en assurant un temps d’écriture raisonnable
+	\item \textbf{Productivité} :offrir une documentation de qualité, plus ou moins exhaustive, et posséder des ressources communautaires utiles
+\end{itemize}
+\\
+\\
+Un autre aspect, relatif généralement aux applications de type SaaS, serait la :
+\begin{itemize}
+	\item \textbf{Scalabilité} : support de mécanismes de montée en charge
+\end{itemize}
+\\
+Cependant, celui-ci n’a pas été estimé prioritaire pour le moment dû au nombre restreint d’utilisateurs prévu pour le proche futur. 
+Le problème devrait-t-il se manifester ultérieurement, une décision plus optimale pourra être prise à ce moment pour le régler (fondamentalement, scalabilité verticale ou horizontale), compte tenu de l’envergure plus importante qu’aurait pris le projet et du nouveau contexte auquel il sera soumis.\\
+Néanmoins, celui-ci a été mentionné pour trancher éventuellement dans le cas d’un dilemme dans le choix entre des solutions très similaires.
+
+\subsubsection{Présentation des solutions étudiées}%-------------------------------------------------------------------
+Parmi les systèmes de gestion de base de données disponibles sur le marché, quelques options ont retenu notre attention lors du choix des solutions à considérer. Étant donné le caractère open-source recherché, des solutions telles que OracleDB ou SQL Server n’ont pas été prises en compte.\\
+Les solutions étudiées se classifient essentiellement en deux catégories :
+\begin{itemize}
+    \item Les bases de données relationnelles
+    \item Les bases de données non-relationnelles
+\end{itemize}
+\
+
+Les bases de données relationnelles ayant étét considérées pendant plusieurs décennies comme le de facto pour le développement d’applications, deux solutions open-source se sont distinguées par rapport aux autres :
+\begin{itemize}
+    \item[•] \textbf{MySQL / MariaDB} :\\
+C’est un système de gestion de bases de données relationnelles (SGBDR). Il fait partie des SGBDR les plus utilisés au monde, autant par le grand public (applications web principalement) que par des professionnels. Une partie de sa popularité provient de son inclusion dans les packages LAMP (Linux, Apache, MySQL/MariaDB, PHP) et ses variantes. MariaDB est une branche de MySQL maintenue par son créateur original. Celle-ci a vu le jour suite à l’acquisition de Sun (alors propriétaire de MySQL) par Oracle. À ce jour, leurs fonctionnalités restent très similaires. Il est développé dans un souci de performances élevées en lecture, ce qui signifie qu'il est davantage orienté vers le service de données déjà en place que vers celui de mises à jour fréquentes et fortement sécurisées.
+    \item[•] \textbf{PostgreSQL} :\\
+PostgreSQL est un système de gestion de base de données relationnelle et objet (SGBDRO). Ce système, concurrent d'autres systèmes de gestion de base de données libres ou propriétaires, est plus avancé que ses concurrents dans la conformité aux standards SQL et est pratiquement conforme aux diverses normes ANSI SQL. Il est largement reconnu pour son comportement stable, proche d’Oracle, mais aussi pour ses possibilités de programmation étendues, directement dans le moteur de la base de données.
+\end{itemize}
+\
+
+D’une autre part, les bases de données non-relationnelles étant très populaires lors de la mise en place d’applications de type SaaS, les solutions suivantes ont aussi été considérées :
+\begin{itemize}
+    \item[•] \textbf{MongoDB} :\\
+C’est un système de gestion de base de données orientée documents, répartissable sur un nombre quelconque d'ordinateurs et ne nécessitant pas de schéma prédéfini des données. Il est développé depuis 2007 par 10gen, devenue MongoDB. Le serveur et les outils sont distribués sous licence AGPL. Il fait partie de la mouvance NoSQL.
+    \item[•] \textbf{Cassandra} :\\
+C’est un système de gestion de base de données (SGBD) adhérant au mouvement NoSQL, conçu pour gérer des quantités massives de données sur un grand nombre de serveurs, assurant une haute disponibilité en éliminant les points individuels de défaillance. Initialement développée par Facebook, l'application a été libérée dans l'espace open source en juillet 2008. Le projet est maintenant porté par la fondation Apache.
+    \item[•] \textbf{CouchDB} :\\
+Apache CouchDB est un système de gestion de base de données orienté documents, écrit en langage Erlang, donc optimisé pour la concurrence et les environnements faibles en ressources. Il est distribué sous licence Apache. Conçu pour le Web, il fait partie de la mouvance NoSQL, et a été construit de manière à pouvoir être réparti sur de multiples serveurs.
+\end{itemize}
+\
+
+Il est à noter que les solutions, dites « NoSQL », orientées clé-valeur n’ont pas été considérées, vu le manque de fonctionnalités (intentionnel) généralement offert. De même, la complexité des solutions orientées graphes ne parait pas justifiée face aux besoins de l’application.
+
+\subsubsection{Comparatif}%-----------------------------------------------------------------------------------------
+Le Tableau à la figure \ref{fig:comparatifDB} résume globalement la compatibilité des solutions considérées avec les spécifications établies précédemment.
+On emploiera l’échelle illustrée par la figure\ref{echelleComparatifDB} pour comparer la richesse du support relativement à la fonctionnalité examinée :  de l’absence de support ou d’incompatibilité (1), jusqu’à un support optimal ou une richesse élevée de la granularité du support (5).
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\linewidth]{echelleComparatifDB.png}
+\caption{Échelle associée au tableau de la figure \ref{fig:comparatifDB}}
+\label{fig:echelleComparatifDB}
+\end{figure}
+\
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=1\linewidth]{comparatifDB.png}
+\caption{Comparatif des solutions SGBDR considérées}
+\label{fig:comparatifDB}
+\end{figure}
+\\
+1 – Source: db-engines.com (Top10 = 5, Top20 = 4).\\
+2 – Cassandra ne supporte plus les colonnes dynamiques (rendu obsolète par le remplacement de l’interface Thrift par CQL).\\
+3 – Les jointures sous MongoDB ne sont supportés pour les données partitionnées (sharded).\\
+4 – Cassandra et CouchDB ne supportent pas les jointures nativement. Cette fonctionalité est cependant possible avec SparkSQL ou le connecteur ODBC DataStax. Le concept de vue sous CouchDB permet de réaliser des un résultat comparable aux jointures, via des fonctions map-reduce.\\
+5 – L’isolation sous MongoDB (uniquement via le mot clé $isolated) n’est pas supportées pour les données partitionnées.\\
+6 – Pour les SGBDR, des solutions de montées en charge populaires ont été mis en avant pour la comparaison.\\
+7 – La consistance (forte ou éventuelle) est gérée par le niveau d’isolation employé pour les SGBDR.\\
+
+Les performances ne peuvent être concrètement évaluées que sous un benchmarking élaboré, propre aux besoins de notre application. Ce critère n’a en conséquent pas été traité dans le choix effectué. Il reste à noter que toutes les solutions offrent des performances raisonnables sous des conditions normales d'utilisation, d’après leurs communautés respectives.
+
+\subsubsection{Bilan}%-----------------------------------------------------------------------------------------
+On peut déduire du tableau que les solutions relationnelles supportent davantage les fonctionnalités à offrir à nos clients, étant hautement compatibles avec les besoins d’aide à la décision et de requêtage multidimensionnel. C’est surtout le support robuste des transactions et des jointures qui les favorisent par rapport aux autres solutions.\\
+S'étant décidés à adopter une solution relationnelle, le choix final s’est porté sur PostgreSQL. Sa richesse en fonctionnalités et son support concret des schémas au sens SQL du terme, pour l’isolation des données, le place en tête par rapport à MySQL/MariaDB.\\
+De plus, l’avenir de MySQL et de son alter-ego MariaDB, restant incertain quant à leur divergence éventuelle en fonctionnalités pour les versions futures, les pénalisent par rapport à PostgreSQL.\\
+
+Notons toutefois que le développement de la couche d’accès aux données sera certainement réalisé à l’aide d’un middleware (ORM) qui permettra d’abstraire la base de données cible pour les déploiements internes, prévus de par la mise à disposition d’une offre alternative à l’offre SaaS (i.e on-premises). Dans un tel cas, une solution telle que MySQL pourra faire l’affaire malgré son manque de support concret des schémas, vu que le déploiement se fera pour une seule base de données (ou un nombre très restreint), le système traitant les schémas en tant que bases de données de manière sous-jacente.
 
 
 %==============================================================================
 \section*{Conclusion}
+Ce chapitre a été l'occasion de prendre du recul par rapport au travail d'implémentation à réaliser. Les besoins de l'entreprise ont été formalisés et exprimés de manière explicite. Les fonctionalités requises du produit final identifiées, une étude technique a été entreprise en vue de poser les bases pour le travail de développement à effectuer.\\
 Le dénouement de la phase d'inception annonce le début de la phase de construction. Cette phase sera détaillée en long et en large au cours des prochains chapitres.
 
 %==============================================================================
