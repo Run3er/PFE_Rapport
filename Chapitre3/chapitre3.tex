@@ -117,19 +117,103 @@ La figure \ref{fig:useCasesDiag} illustre le diagramme de cas d'utilisation glob
 
 
 %==============================================================================
-\section{Architecture générale}
+\section{Étude technique}
+Avant d'entamer la phase de développement, il est nécessaire de prendre du recul par rapport aux exigences et d'établir une vue d'ensemble du système d'un point de vue architectural. Dans notre cas en particulier, l'aspect SaaS de l'application impose une étude approfondie de l'infrastructure sous-jacente à mettre en place et des technologies à employer.
 
 %-----------------------------------------------------------------------------------
-%\subsection{}
+\subsection{Architecture générale}
+Une vue d'ensemble de l'architecture permet de mettre en évidence les différentes couches du système à développer.\\
+Au vu du caractère Web de l'application, nous nous sommes d'abord orientés vers une architecture traditionnelle en 3-tiers \ref{3_tiers}, pour finalement opter pour une architecture en 4-tiers, se démarquant par l'ajout d'un serveur statique, séparé du serveur d'application, dédié à la récupération du front-end. Le schéma de la figure \ref{fig:baseArchitecture} illustre la relation entre les différents composants de cette architecture.
 
+\begin{figure}[h]
+\centering
+\includegraphics[width=1\linewidth]{baseArchitecture.jpg}
+\caption{Architecture physique du système}
+\label{fig:baseArchitecture}
+\end{figure}
+\
 
-%==============================================================================
-\section{Choix techniques}
+Notre système modélisé par le Back-end, chaque tiers représente l'une de ses couches. L'architecture logique du système se retrouve divisée en trois couches :
+\begin{itemize}
+    \item La couche d'accès aux données : Cette couche a pour charge la gestion des données du système (stockage, persistence, gestion de l'accès, ...).\\
+Elle est représentée par notre base de données.
+    \item La couche métier : C'est la partie fonctionnelle du système. Elle implémente la logique opératoire métier et se repose sur les données fournies par la couche inférieure. Elle offre des services à destination de la couche de présentation.\\
+Elle est représentée par notre serveur d'application, qui fournit ces services sous forme d'un API.
+    \item La couche de présentation : Elle encapsule l'interface utilisateur et correspond à la partie visible de l'application. Cette couche se repose sur les services offerts par la couche métier pour traiter les requêtes de l'utilisateur et s'occupe de la restitution et de la mise en forme des informations récupérées.\\
+Elle est représentée par notre serveur statique, qui fournit l'application front-end au client.
+\end{itemize}
+\
+
+Dans notre contexte, cette architecture en couches est la plus appropriée. L'architecture 3-tiers traditionnelle permet de bénéficier de :
+\begin{itemize}
+    \item Une répartition claire des responsabilités entre les couches
+    \item Un couplage faible entre les différents niveaux
+    \item Une simplicité lors de la réalisation de tests (la logique métier est isolée du reste des couches)
+    \item Sécurité accrue, due à la séparation entre le client et les données
+    \item La possibilité d'utilser des clients légers (adaptés aux dispositifs mobiles)
+    \item Une évoluvité élevée, résultant de l'indépendance des couches
+\end{itemize}
+\
+
+À partir de là, l'étape suivante logique pour une séparation plus aboutie des préopcupations, et donc une maintenance facilitée, a été l'orientation vers l'architecture en 4-tiers. Au travers de son adoption, nous avons clairement séparé entre l'application Front-end et l'application en charge de l'exposition de notre API. L'administration de ces deux applications sous la forme de deux projets distincts nous permet en plus de bénéficier de :
+\begin{itemize}
+    \item Un découplage net entre les rôles des deux applications
+    \item Une évolution indépendante du Front-end
+    \item Un déploiement séparé pour les deux applications
+    \item Une montée en charge optimisée pour chaque entité
+    \item Un versioning à part pour les deux projets
+\end{itemize}
+\
+
+Les détails techniques de l'architecture seront exposés au cours des sections suivantes.
+
+%-----------------------------------------------------------------------------------
+\subsection{Technologies de base}
+Pour traiter efficacement l'aspect SaaS du produit, un choix judicieux des technologies a été effectué préalablement au démarrage de la phase de développement. Nous procéderons à la présentation des technologies de base relatives à chacune des couches de notre architecture ainsi qu'à notre environnement de développement.
+
+%-----------------------------------------------------------------------------------
+\subsubsection*{Couche de présentation}
+Pour réussir à développer un produit SaaS de qualité, on s'est orienté vers la mise en place d'une SPA (Single Page Application) pour la partie Front-end de notre application.\\
+
+Dû à sa notoriété et à notre familiarité avec lui, le framework AngularJS a été notre choix de référence. L'ampleur de la communauté active développée autour de lui ainsi que l'abondance des ressources associées et le succès notoire en soi du framework nous a convaincu à l'adoption du framework en tant que brique de base pour le développement de la couche Front-end.
+
+%-----------------------------------------------------------------------------------
+\subsubsection*{Couche métier}
+La couche métier de notre application nécessite le développement d'un API, dont les services seront exposés à la couche supérieure.\\
+Vu les fonctionalités axées données (ressources) de notre application, nous nous sommes tournés vers la mise en place d'un API REST. En effet, dans notre cas, REST \ref{ANAGRAMME: REST} présente les avantages suivants :
+\begin{itemize}
+    \item L'adoption du standard HTTP en tant que protocole de communication. Son support universel assure une indépendance des technologies avec lesquelles intéragit l'API et ne restreint aucunement l'évoluvité du reste des composants.
+    \item L'aspect sans état (stateless) du protocole facilite considérablement la montée en charge, considération importante à prendre en compte pour toute application en mode SaaS.
+    \item Ce protocole est aussi optimisé pour l'interopérabilité avec les navigateurs (mise en cache, codes d'erreurs standards, ...) : REST représente en elle même l'architecture du web.
+    \item Les Web services REST sont légers, ce qui les rend adaptés à la consommation via des dispositifs mobiles à ressources restreintes, exigence non fonctionnelle de notre application.
+    \item Le support du format JSON le rend particulièrement adapté à l'interopérabilité avec le langage Javascript, qui n'est autre que le langage de dévelopement de la logique Front-end.
+    \item L'abondance des technologies permettant de développer des API REST de qualité, de manière très productive.
+\end{itemize}
+\
+
+Vu le succès retentissant des projets de l'entreprise d'accueil se reposant sur le langage Java, ainsi que notre familiarité avec le langage, il a été convenu dès le départ de l'adopter pour le développement en Back-end de notre produit.\\
+Pour l'édification de l'API REST, nous avons favorisé l'usage de technologies conuues. C'est ainsi que nous avons opté pour l'emploi de la suite Spring. Véritable framework pour la conception de bout en bout de solutions logicielles complètes en Java, Spring offre une panoplie d'outils pour assiter à la mise en place d'un API REST. Les technologies Spring employées seront présentées en détail au cours du chapitre \ref{chap: BACKEND}.
+
+%-----------------------------------------------------------------------------------
+\subsubsection*{Couche d'accès aux données}
+Pour répondre aux besoins de gestion de données de notre application, nous avons procédé à une étude approfondie des systèmes de gestion de base de données disponibles sur le marché, répondant aux critères d'exigence définis par l'entreprise d'accueil. Cette étude sera exposée durant la section \ref{section: choix SGBDR} et aboutira à la détermination de la base de données à choisir pour les besoins de la couche d'accès aux données.
+
+%-----------------------------------------------------------------------------------
+\subsubsection*{Environnement de travail}
+Pour les besoins de versioning de notre travail, nous nous sommes reposés sur la solution Git.\\
+Git est un logiciel libre créé par l'auteur du noyau Linux. En 2016, il s’agissait du logiciel de gestion de versions le plus populaire utilisé \ref{↑ (en) « Git 2.8.2 Popular Source Code Management System Released with Over 18 Bug Fixes » [archive] , sur Softpedia, 2 mai 2016 (consulté le 2 mai 2016)}. Il se distingue par un système de gestion de versions décentralisé.\\
+Le choix de ce système de gestion de versions est judicieux dans notre cas, car il permet de garder une version complète de l'historique d'un projet en local, ce qui s'avère très utile pour le développement continue au sein et hors de l'entreprise.\\
+
+La gestion de la liste des articles de travail ou du "Backlog" a été réalisée à l'aide de l'outil Trello.\\
+Trello est à la base un outil de gestion de projet en ligne, lancé en septembre 2011, et inspiré par la méthode Kanban. Ce dernier point le rend très adapté à la gestion agile requise.
+
+%-----------------------------------------------------------------------------------
+\subsection{Choix du système de gestion de base de données}
 
 
 %==============================================================================
 \section*{Conclusion}
-Le dénouement de la phase d'inception annonce le début de la phase de construction.
+Le dénouement de la phase d'inception annonce le début de la phase de construction. Cette phase sera détaillée en long et en large au cours des prochains chapitres.
 
 %==============================================================================
 \end{spacing}
