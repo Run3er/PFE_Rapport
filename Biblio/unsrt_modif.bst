@@ -1,4 +1,4 @@
-% modifié pour biblio thèse. 21 décembre 2007.
+% modifiÃ© pour biblio thÃ¨se. 21 dÃ©cembre 2007.
 ENTRY
   { address
     author
@@ -97,7 +97,7 @@ FUNCTION {output.check}
 { 't :=
   duplicate$ empty$
     { pop$ "empty " t * " in " * cite$ * warning$ }
-    'outputvol.nonnull % pour éviter d'avoir une virgule avant l'année cf en bas article.
+    'outputvol.nonnull % pour Ã©viter d'avoir une virgule avant l'annÃ©e cf en bas article.
   if$
 }
 

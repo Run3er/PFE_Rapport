@@ -12,11 +12,11 @@
 \usepackage{tabularx}
 \usepackage{epsfig, floatflt, amssymb}
 \usepackage{moreverb} %% pour le verbatim en boite
-\usepackage{cases}%equations en systemes numérotés - soluce possible package : CASES
+\usepackage{cases}%equations en systemes numerotes - soluce possible package : CASES
 \usepackage{multirow} %% pour regrouper un texte sur plusieurs lignes dans une table
 \usepackage{url} %% pour citer les url par \url
 \usepackage[all]{xy} %% pour la barre au dessus des symboles
-\usepackage{textcomp} %% pour le symbol pour mille par \textperthousand et degrés par \degres
+\usepackage{textcomp} %% pour le symbol pour mille par \textperthousand et degres par \degres
 \usepackage[right]{eurosym}
 \usepackage{setspace} %interligne simple, double etc...
 \usepackage{Classes/eurosans} %%pour le symbole \euro
@@ -33,10 +33,10 @@
 \newcommand{\cmark}{\ding{51}}% checkmark signs
 \newcommand{\xmark}{\ding{55}}% checkmark signs
 \newcommand{\ie}{c.-\`a-d.~}
-\hbadness=10000% pb d'overfull box réglé
+\hbadness=10000% pb d'overfull box regle
 \hfuzz=50pt
 \pdfcompresslevel9 % pour compresser le pdf final au maximum
-\pdfoptionpdfminorversion=5 % pour accepté les images PDF version 1.5 (ex: celles produites par Office 2007)
+\pdfoptionpdfminorversion=5 % pour accepte les images PDF version 1.5 (ex: celles produites par Office 2007)
 \def\underscore{\char`\_}
 \makeatletter
 \renewcommand{\thesection}{\arabic {section}}
@@ -55,10 +55,10 @@
 
 \usepackage{listings}
 \lstloadlanguages{xml, java}
-	
-	 \usepackage{listings}
-  \usepackage{courier}
- \lstset{
+
+\usepackage{listings}
+\usepackage{courier}
+\lstset{
          basicstyle=\footnotesize\ttfamily,
          %numbers=left,
          numberstyle=\tiny,
@@ -81,7 +81,7 @@
          showstringspaces=false
  }
 
- \usepackage{caption}
+\usepackage{caption}
 \DeclareCaptionFont{white}{\color{white}}
 \DeclareCaptionFont{red}{\color{red}}
 \DeclareCaptionFont{black}{\color{black}}
@@ -94,7 +94,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \renewcommand\figurename{\small\textbf{Figure}}
 
-\addtocounter{page}{-1}%pour revenir à 0
+\addtocounter{page}{-1}%pour revenir e 0
 
 % Pour remplir la page de garde
 \AuteurA{Flen} {FOULENI}
@@ -106,54 +106,54 @@
 \EncadrantS{Mme} {Flena} {FALTEN}
 
 \Filiere{GL ou RT}
-\datesout{--/--/2017}
+\datesout{--/--/2015}
 
 
 
-\President{M. President} {FLEN}     %% Président du Jury
+\President{M. President} {FLEN}     %% President du Jury
 \RapporteurA{Mme. Rapporteur} {FLENA} %%Rapporteur
 
 
 
-\AnneeUniv{2016/2017}
+\AnneeUniv{2014/2015}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\makethese %% crée la couverture.
+\makethese %% cree la couverture.
 
 \onehalfspacing
 
-% une page blanche (deuxième de couverture)
+% une page blanche (deuxieme de couverture)
 \newpage\thispagestyle{empty}\addtocounter{page}{-3}
 \null\newpage\thispagestyle{empty}
 
-\dominitoc % génère la minitoc
+\dominitoc % genere la minitoc
 \nomtcrule % supprime les lignes horizontales de la minitoc
 \renewcommand{\mtctitle}{Plan} % Modifie le titre de la minitoc
 
-\frontmatter %numérotation en iii
+\frontmatter %numerotation en iii
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[R]{Remerciements}
 \fancyfoot[R]{\thepage}
 \renewcommand{\headrulewidth}{0.5pt}
 \renewcommand{\footrulewidth}{0pt}
-%\include{Dedicace/dedicace}
-%\include{Remerciement/remerciement}
+\include{Dedicace/dedicace}
+\include{Remerciement/remerciement}
 
 
 %%%%%%%% TOC
 
-%profondeur dans la table des matières et de la numérotation des sections
+%profondeur dans la table des matieres et de la numerotation des sections
 
 \setcounter{secnumdepth}{3}
 \setcounter{tocdepth}{3}
 
 
 \renewcommand{\contentsname}%
-    {Table des Matières}%
+{Table des Matières}%
 
 %%%%minitoc
-%\dominitoc % génère la minitoc
+%\dominitoc % genere la minitoc
 %\nomtcrule % supprime les lignes horizontales de la minitoc
 %\renewcommand{\mtctitle}{Plan} % Modifie le titre de la minitoc
 
@@ -162,35 +162,7 @@
 
 \renewcommand{\headrulewidth}{0.5pt}
 \renewcommand{\footrulewidth}{0pt}
-\fancyhead[R]{Table des Matières}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\fancyhead[R]{Résumés}
-
-%\include{Resumes/resumeF}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-\mainmatter %numéros arabes
-\pagestyle{fancy}
-\fancyhead[R]{Introduction Générale}
-\include{Introduction/introduction}
-\fancyhf{}
-%\fancyhead[R]{Introduction Générale}
-\fancyfoot[R]{\thepage}
-\renewcommand{\headrulewidth}{0.5pt}
-\renewcommand{\footrulewidth}{0pt}
-
-
-\include{Chapitre1/chapitre1}
-\include{Chapitre2/chapitre2}
-\include{Chapitre3/chapitre3}
-\include{Chapitre4/chapitre4}
-\include{Chapitre5/chapitre5}
-\include{Chapitre6/chapitre6}
-\include{Chapitre7/chapitre7}
+\fancyhead[R]{Table des Matieres}
 
 
 %%%%%%%% Figures
@@ -221,7 +193,35 @@
 
 \fancyhead[R]{Liste des Tableaux}
 
-%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\fancyhead[R]{Resumes}
+
+\include{Resumes/resumeF}
+
+%\include{Resumes/resumeA}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\mainmatter %numeros arabes
+\pagestyle{fancy}
+\fancyhead[R]{Introduction Générale}
+\include{Introduction/introduction}
+\fancyhf{}
+%\fancyhead[R]{Introduction Générale}
+\fancyfoot[R]{\thepage}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0pt}
+
+
+
+\include{Chapitre1/chapitre1}
+\include{Chapitre2/chapitre2}
+\include{Chapitre3/chapitre3}
+\include{Chapitre4/chapitre4}
+\include{Chapitre5/chapitre5}
+\include{Chapitre6/chapitre6}
+\include{Chapitre7/chapitre7}
 
 
 \backmatter
@@ -232,19 +232,19 @@
 \fancyfoot[R]{\thepage}
 \renewcommand{\headrulewidth}{0.5pt}
 \renewcommand{\footrulewidth}{0pt}
-%\include{Conclusion/conclusion}
+\include{Conclusion/conclusion}
 
 
 %\bibliographystyle{apalike-fr}
 \bibliographystyle{Biblio/unsrt_modif}
 %\singlespacing
-\renewcommand{\bibname}{Bibliographie}
+\renewcommand{\bibname}{Bibliographie - BIDON}
 
 \bibliography{Biblio/aesm_edspia}
 
 \onehalfspacing
 
 \appendix
-%\include{Annexe1/annexe1}
+\include{Annexe1/annexe1}
 
-\end{document} 
+\end{document}
